@@ -1,5 +1,5 @@
 package com.example.oop.banking;
-import com.example.oop.banking.CurrentAccount;
+
 public class Main {
     public static void main(String[] args) {
         Account current = new CurrentAccount(2435352, 500.0, 200);
