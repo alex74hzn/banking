@@ -26,15 +26,15 @@ public class SavingsAccount extends Account{
         deposit(interest);
     }
 
-    public void withDraw(double amount){
+   public void withDraw(double amount){
         double profit = getBalance() - FROZEN_PART;
         if(amount > profit){
-            setErrorMessage("Вы можете снять только проценты: " + profit );
+            setMessage(String.format("Вы можете снять только проценты: %4.2f",profit ));
         }
         else{
             double balance = getBalance() - amount;
             setBalance(balance);
-
+            setMessage("Операция завершена успешно.");
         }
     }
     public String toString(){
