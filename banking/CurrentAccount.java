@@ -23,6 +23,7 @@ public class CurrentAccount extends Account {
         }
         else{
             super.withDraw(amount);
+            setMessage("Операция завершена успешно.");
         }
     }
 
